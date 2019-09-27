@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+}
+
+/* Container mit Hintergrundbild */
+.container {
+    width: 100%;
+    max-height: 700px;
+    background: url(../img/frontend-bg-green.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding:10px;
+    min-width:440px;
+}
+
+/* Header mit Logo und Navigation */ 
+header {
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    grid-area: logo;
+    font-family: 'Bungee Outline', cursive;
+    font-size: 20px;
+}
+
+nav {
+    grid-area: nav;
+    justify-self:end;
+}
+
+nav ul {
+    margin-top: 5px;
+}
+
+nav ul li {
+    display:inline;
+    list-style:none;
+    margin:6px;
+    font-size: 14px;
+}
+
+nav ul li:last-child {
+    margin-right:0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration:none;
+    font-weight: 700;
+    padding: 8px 28px;
+    border: 2px solid transparent;  
+}
+
+nav li a:hover {
+    border: 2px solid #fff;
+}
+
+/* Hauptbereich mit Zitat und Formular */
+.main {
+    display:flex;
+    max-width:1200px;
+    margin:0 auto;
+    min-height:500px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin:20px 0;
+}
+
+.teaser {
+    width:60%;
+}
+
+.teaser h3{
+    line-height: 1.5em;
+}
+
+.teaser a{
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form {
+    width:35%;
+}
+
+.form h3{
+    letter-spacing: 0.1em;
+}
+
+.form p{
+    font-size: 14px;
+}
+
+input#name {
+    width: 100%;
+    border:none;
+    margin: 5px 0;
+    color: #009688;
+    padding: 0 10px;
+    height: 45px;
+}
+
+textarea {
+    height: 85px;
+    resize: none;
+    width: 100%;
+    border:none;
+    margin: 5px 0;
+    color: #009688;
+    padding: 10px 10px;
+    font-family: inherit;
+    font-size:12px;
+}
+
+input#submit {
+    height: 45px;
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    border:none;
+    width: 140px;
+}
+
+
+/* Für Bildschirme <= 768px Breite */
+@media only screen and (max-width: 768px) {
+    
+    .main {
+        display:block;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .teaser, .form {
+        width:100%;
+        padding-top:5em;
+    }
+}
+
+/* Zusätzlich evtl. weitere Media Query <= 480px mit Umwandlung der Navigation in Hamburger-Menu */
